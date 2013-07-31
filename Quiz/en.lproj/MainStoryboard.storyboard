@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Quiz View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="QuizViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsU-sE-Zqc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="s5c-WB-y2k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yua-G0-pEH">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="248" id="E4k-A4-Q2K"/>
+                                    <constraint firstAttribute="height" constant="27" id="ZYT-a9-EG5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKZ-Cm-HNg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="0ob-Sw-6CF"/>
+                                    <constraint firstAttribute="height" constant="44" id="Sif-ev-bmc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="show Qustion">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showQuestion:" destination="2" eventType="touchUpInside" id="Rq6-CF-bJg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkE-VD-yC0">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DUb-pI-WlX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="show Answer">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAnswer:" destination="2" eventType="touchUpInside" id="m1Y-Td-EEL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CKZ-Cm-HNg" firstAttribute="leading" secondItem="Yua-G0-pEH" secondAttribute="leading" type="default" id="J4w-eh-2iF"/>
+                            <constraint firstAttribute="bottom" secondItem="Yua-G0-pEH" secondAttribute="bottom" constant="170" id="Lbc-nV-bSE"/>
+                            <constraint firstItem="PkE-VD-yC0" firstAttribute="leading" secondItem="Yua-G0-pEH" secondAttribute="leading" type="default" id="Q3B-9p-992"/>
+                            <constraint firstItem="fsU-sE-Zqc" firstAttribute="top" secondItem="3" secondAttribute="top" constant="44" id="a6M-dj-AIq"/>
+                            <constraint firstItem="PkE-VD-yC0" firstAttribute="trailing" secondItem="CKZ-Cm-HNg" secondAttribute="trailing" type="default" id="aw1-vO-xf4"/>
+                            <constraint firstItem="Yua-G0-pEH" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="cGh-cJ-y75"/>
+                            <constraint firstItem="fsU-sE-Zqc" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hdp-Nk-lAT"/>
+                            <constraint firstItem="CKZ-Cm-HNg" firstAttribute="top" secondItem="fsU-sE-Zqc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kL6-lm-Dmx"/>
+                            <constraint firstItem="fsU-sE-Zqc" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="mig-hC-j3R"/>
+                            <constraint firstAttribute="bottom" secondItem="PkE-VD-yC0" secondAttribute="bottom" constant="99" id="vPK-jk-2Za"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answersField" destination="Yua-G0-pEH" id="Zym-Bh-tni"/>
+                        <outlet property="questionField" destination="fsU-sE-Zqc" id="vg8-pT-ryO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8" y="53"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="QuizViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QuizViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="showAnswer:"/>
+                <relationship kind="action" name="showQuestion:"/>
+                <relationship kind="outlet" name="answersField" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionField" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
